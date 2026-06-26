@@ -1,0 +1,22 @@
+{
+  "name": "quizly-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "format": "prettier --write 'frontend/main.jsx' 'frontend/src/**/*.{js,jsx}' 'vite.config.js'",
+    "format:check": "prettier --check 'frontend/main.jsx' 'frontend/src/**/*.{js,jsx}' 'vite.config.js'"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.4"
+  }
+}

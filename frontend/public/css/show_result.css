@@ -1,0 +1,5 @@
+/* Latest test result stylesheet */
+@import url('../OTS/master.css');
+
+.result-card { position: relative; }
+.score-ring { isolation: isolate; }

@@ -1,0 +1,27 @@
+{% extends 'master.html' %}
+
+{%block title%}OTS Registration Status{%endblock title%}
+
+{%block top%}
+<a href="{%url 'OTS:registrationForm'%}">Signup</a>
+<a href="{%url 'OTS:login'%}">Login</a>
+{%endblock top%}
+
+{%block content%}
+{% if userStatus == 1 %}
+    <div class="userStatus">
+        Sorry, username already exists, please try different Username
+        <a href="{%url 'OTS:registrationForm'%}">Back to Condidate Registration Page</a>
+    </div>
+{%elif userStartus == 2 %}
+    <div class="userStatus">
+        Congralation!! ,User Created SucessFully
+        <a href="{%url 'OTS:login'%}">Login</a>
+    </div>
+{% elif userStartus == 3 %}
+    <div class="userStatus">
+        Opps!!, Improprer Request
+        <a href="{%url 'OTS:registrationForm'%}">Back to Condidate Registration Page</a>
+    </div>
+{% endif %}
+{%endblock%}

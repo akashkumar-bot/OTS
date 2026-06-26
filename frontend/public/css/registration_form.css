@@ -1,0 +1,5 @@
+/* Candidate registration page stylesheet */
+@import url('../OTS/master.css');
+
+.auth-form-panel { background: var(--paper); }
+.auth-form-panel .field input { transition: border-color .2s, box-shadow .2s; }

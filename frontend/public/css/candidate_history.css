@@ -1,0 +1,5 @@
+/* Candidate test history stylesheet */
+@import url('../OTS/master.css');
+
+.table-card table { min-width: 650px; }
+.history-summary { position: relative; }

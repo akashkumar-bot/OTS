@@ -1,0 +1,58 @@
+@import url('../OTS/master.css');
+
+.settings-page { padding-top: 60px; padding-bottom: 90px; min-height: 720px; }
+.settings-heading { margin-bottom: 34px; }
+.settings-heading h1 { font: 800 42px 'Manrope'; letter-spacing: -1.8px; margin: 8px 0; }
+.settings-heading p { color: var(--muted); margin: 0; }
+.settings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
+.settings-column { display: grid; gap: 22px; }
+.settings-card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+.settings-card-head { display: flex; gap: 14px; padding: 22px 24px; border-bottom: 1px solid var(--line); }
+.settings-card-head>span { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; flex: none; background: #e5efe7; color: var(--green); }
+.settings-card-head h2 { font: 700 18px 'Manrope'; margin: 0 0 4px; }
+.settings-card-head p { color: var(--muted); font-size: 12px; line-height: 1.5; margin: 0; }
+.settings-card-body { padding: 24px; }
+.settings-card .field:last-of-type { margin-bottom: 0; }
+.settings-card .field small { display: block; margin-top: 6px; color: var(--muted); font-size: 11px; }
+.settings-card input:disabled { background: var(--cream); color: var(--muted); cursor: not-allowed; }
+.settings-save { margin-top: 21px; }
+.two-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+.choice-grid { display: grid; gap: 10px; }
+.theme-choices { grid-template-columns: repeat(3, 1fr); }
+.quiz-choices { grid-template-columns: repeat(4, 1fr); }
+.choice { min-height: 78px; padding: 12px 8px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: transparent; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; position: relative; }
+.choice:hover { border-color: #9eb2a6; }
+.choice.active { border: 2px solid var(--green); background: #edf4ef; color: var(--green); }
+.choice>svg:first-child { width: 20px; }
+.choice>svg:last-child { width: 14px; position: absolute; right: 7px; top: 7px; }
+.choice span { font-size: 11px; font-weight: 700; }
+.choice b { font: 800 20px 'Manrope'; }
+.toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; }
+.toggle-row>span { display: flex; flex-direction: column; gap: 4px; }
+.toggle-row b { font-size: 14px; }
+.toggle-row small { color: var(--muted); line-height: 1.4; }
+.toggle-row input { position: absolute; opacity: 0; pointer-events: none; }
+.toggle-row i { width: 44px; height: 25px; background: #cbd1ca; border-radius: 30px; position: relative; flex: none; transition: .2s ease; }
+.toggle-row i:after { content: ''; position: absolute; width: 19px; height: 19px; left: 3px; top: 3px; border-radius: 50%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,.18); transition: .2s ease; }
+.toggle-row input:checked+i { background: var(--green); }
+.toggle-row input:checked+i:after { transform: translateX(19px); }
+.toggle-row input:focus-visible+i { outline: 3px solid rgba(36,94,71,.22); outline-offset: 3px; }
+.settings-notice { margin: -10px 0 24px; padding: 13px 16px; border-radius: 11px; display: flex; gap: 9px; align-items: center; font-size: 13px; }
+.settings-notice svg { width: 18px; }
+.settings-notice.success { color: #286343; background: #e1f1e7; }
+.settings-notice.error { color: #a43a37; background: #fff0ee; }
+.preference-saved { position: fixed; right: 24px; bottom: 24px; z-index: 40; padding: 12px 16px; border-radius: 11px; color: white; background: var(--green); box-shadow: var(--shadow); display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; }
+
+@media (max-width: 850px) {
+  .settings-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .settings-page { padding-top: 40px; }
+  .settings-heading h1 { font-size: 34px; }
+  .settings-card-body, .settings-card-head { padding: 19px; }
+  .two-fields { grid-template-columns: 1fr; gap: 0; }
+  .theme-choices { grid-template-columns: 1fr 1fr 1fr; }
+  .quiz-choices { grid-template-columns: 1fr 1fr; }
+  .settings-save { width: 100%; }
+}

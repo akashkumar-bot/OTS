@@ -1,0 +1,5 @@
+/* Login page stylesheet */
+@import url('../OTS/master.css');
+
+.auth-form-panel { background: var(--paper); }
+.alert.error { border: 1px solid #f3d0ca; }

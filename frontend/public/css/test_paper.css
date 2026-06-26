@@ -1,0 +1,5 @@
+/* Test paper stylesheet */
+@import url('../OTS/master.css');
+
+.test-main form { width: 100%; }
+.option { appearance: none; }

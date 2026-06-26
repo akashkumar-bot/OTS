@@ -1,0 +1,5 @@
+/* Candidate dashboard stylesheet */
+@import url('../OTS/master.css');
+
+.dashboard .challenge-card { position: relative; overflow: hidden; }
+.dashboard .welcome-row { position: relative; }
